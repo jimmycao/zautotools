@@ -1,0 +1,18 @@
+CC=mpicc
+CFLAGS=-g -Wall
+INCLUDE=/usr/local/include
+LIB=/usr/local/lib
+lib=slurm
+HOSTFILE=--hostfile machinefile
+
+all:mpi_test
+
+mpi_test: mpi_test.c
+	$(CC) $(CFLAGS) $^ -o $@
+	
+run: mpi_test
+	mpirun -np 10 $< 
+	
+.PHONY:clean
+clean:
+	rm -f *.o mpi_test

@@ -1,0 +1,1 @@
+SUBDIRS = common_test ##mpi_io
