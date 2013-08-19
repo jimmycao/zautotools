@@ -1,4 +1,4 @@
-SUBDIRS = common container libevent2019
+SUBDIRS = common container #libevent2019
 
 bin_PROGRAMS = common_test
 common_test_SOURCES = common/common.h common/xmalloc.h common/xstring.h \
