@@ -1,0 +1,1 @@
+SUBDIRS = digstr list other pointer preprocess string
